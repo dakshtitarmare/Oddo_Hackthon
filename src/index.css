@@ -1,11 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-/* -------------------------------------------
-   🎨 COLOR SYSTEM (CSS Variables)
--------------------------------------------- */
 :root {
   --powder-petal: #eddcd2ff;
   --linen: #fff1e6ff;
@@ -17,253 +15,131 @@
   --alice-blue: #d6e2e9ff;
   --pale-sky: #bcd4e6ff;
   --powder-blue: #99c1deff;
-
-  /* FONT FAMILY */
-  --font-main: "Lora", serif;
-
-  /* -------------------------------------------
-     TYPOGRAPHY SCALE  
-     Using CSS helper classes since no config
-  -------------------------------------------- */
-
-  /* Display */
-  --display-lg-size: 39.06px;
-  --display-lg-weight: 800;
-  --display-lg-line: 1.78;
-  --display-lg-track: 0.015em;
-
-  --display-md-size: 34.94px;
-  --display-md-weight: 800;
-  --display-md-line: 1.78;
-  --display-md-track: 0.015em;
-
-  /* Headings */
-  --h1-size: 31.25px;
-  --h1-weight: 700;
-  --h1-line: 1.78;
-  --h1-track: 0.02em;
-
-  --h2-size: 25px;
-  --h2-weight: 600;
-  --h2-line: 1.78;
-  --h2-track: 0.02em;
-
-  --h3-size: 22.36px;
-  --h3-weight: 600;
-  --h3-line: 1.84;
-  --h3-track: 0.025em;
-
-  --h4-size: 20px;
-  --h4-weight: 500;
-  --h4-line: 1.84;
-  --h4-track: 0.025em;
-
-  --h5-size: 18.91px;
-  --h5-weight: 500;
-  --h5-line: 1.84;
-  --h5-track: 0.03em;
-
-  --h6-size: 17.89px;
-  --h6-weight: 500;
-  --h6-line: 1.84;
-  --h6-track: 0.03em;
-
-  /* Body */
-  --body-xl-size: 16.92px;
-  --body-xl-weight: 400;
-  --body-xl-line: 1.84;
-  --body-xl-track: 0.03em;
-
-  --body-size: 16px;
-  --body-weight: 400;
-  --body-line: 1.84;
-  --body-track: 0.03em;
-
-  --body-sm-size: 15.13px;
-  --body-sm-weight: 400;
-  --body-sm-line: 1.9;
-  --body-sm-track: 0.03em;
-
-  /* Caption */
-  --caption-lg-size: 14.31px;
-  --caption-lg-weight: 400;
-  --caption-lg-line: 1.9;
-  --caption-lg-track: 0.03em;
-
-  --caption-size: 13.53px;
-  --caption-weight: 400;
-  --caption-line: 1.9;
-  --caption-track: 0.03em;
-
-  --caption-sm-size: 12.8px;
-  --caption-sm-weight: 300;
-  --caption-sm-line: 1.9;
-  --caption-sm-track: 0.03em;
-
-  --overline-size: 12.11px;
-  --overline-weight: 500;
-  --overline-line: 1.9;
-  --overline-track: 0.03em;
 }
 
-/* Apply global font */
 body {
-  font-family: var(--font-main);
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-color: var(--parchment);
+  color: #000;
 }
 
-
-/* -------------------------------------------
-   📌 TYPOGRAPHY UTILITY CLASSES  
--------------------------------------------- */
-
-/* Display */
-.text-display-lg {
-  font-size: var(--display-lg-size);
-  font-weight: var(--display-lg-weight);
-  line-height: var(--display-lg-line);
-  letter-spacing: var(--display-lg-track);
+.display-large {
+  font-family: 'Lora', serif;
+  font-size: 39.06px;
+  font-weight: 800;
+  line-height: 1.78;
+  letter-spacing: 0.015em;
 }
 
-.text-display-md {
-  font-size: var(--display-md-size);
-  font-weight: var(--display-md-weight);
-  line-height: var(--display-md-line);
-  letter-spacing: var(--display-md-track);
+.display-medium {
+  font-family: 'Lora', serif;
+  font-size: 34.94px;
+  font-weight: 800;
+  line-height: 1.78;
+  letter-spacing: 0.015em;
 }
 
-/* Headings */
-.text-h1 {
-  font-size: var(--h1-size);
-  font-weight: var(--h1-weight);
-  line-height: var(--h1-line);
-  letter-spacing: var(--h1-track);
+.h1 {
+  font-family: 'Lora', serif;
+  font-size: 31.25px;
+  font-weight: 700;
+  line-height: 1.78;
+  letter-spacing: 0.02em;
 }
 
-.text-h2 {
-  font-size: var(--h2-size);
-  font-weight: var(--h2-weight);
-  line-height: var(--h2-line);
-  letter-spacing: var(--h2-track);
+.h2 {
+  font-family: 'Lora', serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.78;
+  letter-spacing: 0.02em;
 }
 
-.text-h3 {
-  font-size: var(--h3-size);
-  font-weight: var(--h3-weight);
-  line-height: var(--h3-line);
-  letter-spacing: var(--h3-track);
+.h3 {
+  font-family: 'Lora', serif;
+  font-size: 22.36px;
+  font-weight: 600;
+  line-height: 1.84;
+  letter-spacing: 0.025em;
 }
 
-.text-h4 {
-  font-size: var(--h4-size);
-  font-weight: var(--h4-weight);
-  line-height: var(--h4-line);
-  letter-spacing: var(--h4-track);
+.h4 {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.84;
+  letter-spacing: 0.025em;
 }
 
-.text-h5 {
-  font-size: var(--h5-size);
-  font-weight: var(--h5-weight);
-  line-height: var(--h5-line);
-  letter-spacing: var(--h5-track);
+.h5 {
+  font-family: 'Lora', serif;
+  font-size: 18.91px;
+  font-weight: 500;
+  line-height: 1.84;
+  letter-spacing: 0.03em;
 }
 
-.text-h6 {
-  font-size: var(--h6-size);
-  font-weight: var(--h6-weight);
-  line-height: var(--h6-line);
-  letter-spacing: var(--h6-track);
+.h6 {
+  font-family: 'Lora', serif;
+  font-size: 17.89px;
+  font-weight: 500;
+  line-height: 1.84;
+  letter-spacing: 0.03em;
 }
 
-/* Body */
-.text-body-xl {
-  font-size: var(--body-xl-size);
-  font-weight: var(--body-xl-weight);
-  line-height: var(--body-xl-line);
-  letter-spacing: var(--body-xl-track);
+.body-xl {
+  font-family: 'Lora', serif;
+  font-size: 16.92px;
+  font-weight: 400;
+  line-height: 1.84;
+  letter-spacing: 0.03em;
 }
 
-.text-body {
-  font-size: var(--body-size);
-  font-weight: var(--body-weight);
-  line-height: var(--body-line);
-  letter-spacing: var(--body-track);
+.body {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.84;
+  letter-spacing: 0.03em;
 }
 
-.text-body-sm {
-  font-size: var(--body-sm-size);
-  font-weight: var(--body-sm-weight);
-  line-height: var(--body-sm-line);
-  letter-spacing: var(--body-sm-track);
+.body-small {
+  font-family: 'Lora', serif;
+  font-size: 15.13px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
 }
 
-/* Caption */
-.text-caption-lg {
-  font-size: var(--caption-lg-size);
-  font-weight: var(--caption-lg-weight);
-  line-height: var(--caption-lg-line);
-  letter-spacing: var(--caption-lg-track);
+.caption-large {
+  font-family: 'Lora', serif;
+  font-size: 14.31px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
 }
 
-.text-caption {
-  font-size: var(--caption-size);
-  font-weight: var(--caption-weight);
-  line-height: var(--caption-line);
-  letter-spacing: var(--caption-track);
+.caption {
+  font-family: 'Lora', serif;
+  font-size: 13.53px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
 }
 
-.text-caption-sm {
-  font-size: var(--caption-sm-size);
-  font-weight: var(--caption-sm-weight);
-  line-height: var(--caption-sm-line);
-  letter-spacing: var(--caption-sm-track);
+.caption-small {
+  font-family: 'Lora', serif;
+  font-size: 12.8px;
+  font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
 }
 
-.text-overline {
-  font-size: var(--overline-size);
-  font-weight: var(--overline-weight);
-  line-height: var(--overline-line);
-  letter-spacing: var(--overline-track);
-}
-
-
-/* -------------------------------------------
-   🔵 COLOR UTILITY CLASSES
-   (Use when Tailwind cannot read CSS vars)
--------------------------------------------- */
-
-.bg-powder-petal { background-color: var(--powder-petal); }
-.bg-linen { background-color: var(--linen); }
-.bg-soft-blush { background-color: var(--soft-blush); }
-.bg-petal-frost { background-color: var(--petal-frost); }
-.bg-light-cyan { background-color: var(--light-cyan); }
-.bg-mint-cream { background-color: var(--mint-cream); }
-.bg-parchment { background-color: var(--parchment); }
-.bg-alice-blue { background-color: var(--alice-blue); }
-.bg-pale-sky { background-color: var(--pale-sky); }
-.bg-powder-blue { background-color: var(--powder-blue); }
-
-.text-powder-petal { color: var(--powder-petal); }
-.text-linen { color: var(--linen); }
-.text-soft-blush { color: var(--soft-blush); }
-.text-petal-frost { color: var(--petal-frost); }
-.text-light-cyan { color: var(--light-cyan); }
-.text-mint-cream { color: var(--mint-cream); }
-.text-parchment { color: var(--parchment); }
-.text-alice-blue { color: var(--alice-blue); }
-.text-pale-sky { color: var(--pale-sky); }
-.text-powder-blue { color: var(--powder-blue); }
-
-/* Flip Card 3D Effect */
-
-/* Add this to index.css */
-.perspective-[1000px] {
-  perspective: 1000px;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
+.overline {
+  font-family: 'Lora', serif;
+  font-size: 12.11px;
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
 }

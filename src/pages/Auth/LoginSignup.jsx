@@ -1,47 +1,66 @@
-import React, { useState } from "react";
-import Input from "/src/components/ui/Input";
-import Button from "/src/components/ui/Button";
+import React, { useState } from 'react';
+import FlipCard from '../../components/FlipCard';
+import Button from '../../components/ui/Button';
+import Input from '../../components/ui/Input';
+import useAuth from '../../hooks/useAuth';
+import { validateEmail, validatePassword } from '../../utils/validators';
 
-export default function Auth() {
-  const [isLogin, setIsLogin] = useState(true);
+const LoginForm = ({ flip }) => {
+  const { handleLogin } = useAuth();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (validateEmail(email) && validatePassword(password)) {
+      handleLogin({ email, password });
+    } else {
+      alert('Invalid email or password');
+    }
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-soft-blush px-4">
-      <div className="relative w-full max-w-md h-auto">
-        <div className="bg-white rounded-2xl shadow-xl p-6">
-          {isLogin ? (
-            <div className="flex flex-col justify-center gap-3">
-              <h2 className="text-h3 text-powder-blue mb-2 text-center">Login</h2>
-              <Input label="Email" placeholder="you@example.com" />
-              <Input label="Password" type="password" placeholder="••••••" />
-              <Button full className="mt-4">Login</Button>
-              <p
-                className="text-caption text-pale-sky mt-3 text-center cursor-pointer hover:underline"
-                onClick={() => setIsLogin(false)}
-              >
-                Don't have an account? Sign Up
-              </p>
-              <p className="text-caption text-pale-sky mt-1 text-center cursor-pointer hover:underline">
-                Forgot Password?
-              </p>
-            </div>
-          ) : (
-            <div className="flex flex-col justify-center gap-3">
-              <h2 className="text-h3 text-powder-blue mb-2 text-center">Sign Up</h2>
-              <Input label="Name" placeholder="John Doe" />
-              <Input label="Email" placeholder="you@example.com" />
-              <Input label="Password" type="password" placeholder="••••••" />
-              <Button full className="mt-4">Sign Up</Button>
-              <p
-                className="text-caption text-pale-sky mt-3 text-center cursor-pointer hover:underline"
-                onClick={() => setIsLogin(true)}
-              >
-                Already have an account? Login
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
+    <form onSubmit={onSubmit} className="space-y-4">
+      <h2 className="h3">Login</h2>
+      <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+      <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+      <Button type="submit">Login</Button>
+    </form>
+  );
+};
+
+const SignupForm = ({ flip }) => {
+  const { handleSignup } = useAuth();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (validateEmail(email) && validatePassword(password) && password === confirmPassword) {
+      handleSignup({ email, password });
+    } else {
+      alert('Invalid input or passwords do not match');
+    }
+  };
+
+  return (
+    <form onSubmit={onSubmit} className="space-y-4">
+      <h2 className="h3">Signup</h2>
+      <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+      <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+      <Input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" />
+      <Button type="submit">Signup</Button>
+    </form>
+  );
+};
+
+const LoginSignup = () => {
+  return (
+    <div className="flex justify-center items-center h-screen bg-[var(--linen)]">
+      <FlipCard front={<LoginForm />} back={<SignupForm />} />
     </div>
   );
-}
+};
+
+export default LoginSignup;
