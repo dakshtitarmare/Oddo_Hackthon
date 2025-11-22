@@ -17,49 +17,6 @@ StockMaster helps businesses manage incoming and outgoing stock in real-time. Un
 * **📉 Stock Movements:** Track Receipts (Incoming), Deliveries (Outgoing), and Adjustments with a full audit ledger.
 * **⚡ Instant Search:** Filter products by SKU, Category, or Location.
 
-## ⚙️ Installation & Setup
-
-### Prerequisites
-* Node.js installed
-* Firebase Project credentials
-* Google Gemini API Key
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/dakshtitarmare/Oddo_Hackthon.git
-
-````
-
-### 2\. Backend Setup (Server)
-
-```bash
-cd server
-npm install
-```
-
-Create a `.env` file in the `server` folder:
-
-```env
-PORT=5000
-GEMINI_API_KEY=your_google_gemini_key
-FIREBASE_DB_URL=your_firebase_database_url
-FIREBASE_SERVICE_ACCOUNT=path_to_your_serviceAccountKey.json
-```
-
-Start the server:
-
-```bash
-npm run dev
-```
-
-### 3\. Frontend Setup (Client)
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
 <!-- ## 🔌 API Endpoints
 
 | Method | Endpoint | Description |
