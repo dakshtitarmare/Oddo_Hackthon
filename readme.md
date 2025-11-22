@@ -38,7 +38,7 @@ StockMaster helps businesses manage incoming and outgoing stock in real-time. Un
 
   * Daksh R. Titarmare - Full Stack Developer
   * Devesh M. Patil -  Frontend Developer
-  * Krishna R. Borakhade - Backend Developer
+  * Krishna S. Borakhade - Backend Developer
   * Asim Sayyed - Frontend Developer
 
 
