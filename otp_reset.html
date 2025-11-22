@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StockMaster — Reset Password</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+<div class="auth-container">
+    <h2>OTP Verification & Reset</h2>
+    <label for="email-reset">Enter Email</label>
+    <input type="email" id="email-reset" placeholder="Email for OTP" />
+    <button style="margin-top: 15px;">Send OTP</button>
+    
+    <label for="otp">Enter OTP</label>
+    <input type="number" id="otp" placeholder="e.g., 123456" />
+    <label for="new-pass">New Password</label>
+    <input type="password" id="new-pass" placeholder="Enter new password" />
+    <button onclick="navigateTo('index.html')">Reset and Login</button>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

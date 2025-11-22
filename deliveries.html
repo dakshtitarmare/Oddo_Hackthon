@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockMaster — Deliveries</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-layout">
+    <div class="sidebar">
+        <h3>StockMaster</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">1. Products</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="receipts.html">2. Receipts (Incoming)</a>
+        <a href="deliveries.html">3. Delivery Orders (Outgoing)</a>
+        <a href="transfers.html">4. Internal Transfers</a>
+        <a href="adjustments.html">5. Inventory Adjustment</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="settings.html">6. Settings (Warehouse)</a>
+        <a href="#" id="logout-link" style="margin-top: 50px;">Logout</a>
+    </div>
+    
+    <div class="content">
+        <h1>Delivery Orders (Outgoing Stock)</h1>
+        <button class="btn-primary" style="margin-bottom: 20px;">➕ Create New Delivery Order</button>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Reference</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Scheduled Date</th>
+                    <th>Shipping Location</th>
+                    <th>Total Qty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>DO-0122</td><td>Global Furniture</td><td>Ready</td><td>2025-11-22</td><td>Shipping Bay</td><td>20 units</td></tr>
+                <tr><td>DO-0121</td><td>Local Tradesman</td><td>Done</td><td>2025-11-20</td><td>Shipping Bay</td><td>5 units</td></tr>
+                <tr><td>DO-0123</td><td>ABC Retail</td><td>Waiting</td><td>2025-11-25</td><td>Warehouse 2</td><td>50 units</td></tr>
+            </tbody>
+        </table>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>

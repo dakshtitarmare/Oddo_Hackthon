@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockMaster — Internal Transfers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-layout">
+    <div class="sidebar">
+        <h3>StockMaster</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">1. Products</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="receipts.html">2. Receipts (Incoming)</a>
+        <a href="deliveries.html">3. Delivery Orders (Outgoing)</a>
+        <a href="transfers.html">4. Internal Transfers</a>
+        <a href="adjustments.html">5. Inventory Adjustment</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="settings.html">6. Settings (Warehouse)</a>
+        <a href="#" id="logout-link" style="margin-top: 50px;">Logout</a>
+    </div>
+    
+    <div class="content">
+        <h1>Internal Transfers</h1>
+        <button class="btn-primary" style="margin-bottom: 20px;">➕ Schedule New Transfer</button>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Reference</th>
+                    <th>Source Location</th>
+                    <th>Destination Location</th>
+                    <th>Status</th>
+                    <th>Scheduled Date</th>
+                    <th>Items</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>TRF-0015</td><td>Main Warehouse</td><td>Production Floor</td><td>Waiting</td><td>2025-11-22</td><td>5 products</td></tr>
+                <tr><td>TRF-0014</td><td>Rack A</td><td>Rack B</td><td>Done</td><td>2025-11-21</td><td>1 product</td></tr>
+                <tr><td>TRF-0016</td><td>Warehouse 1</td><td>Warehouse 2</td><td>Draft</td><td>-</td><td>3 products</td></tr>
+            </tbody>
+        </table>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>

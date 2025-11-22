@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockMaster — Inventory Adjustment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-layout">
+    <div class="sidebar">
+        <h3>StockMaster</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">1. Products</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="receipts.html">2. Receipts (Incoming)</a>
+        <a href="deliveries.html">3. Delivery Orders (Outgoing)</a>
+        <a href="transfers.html">4. Internal Transfers</a>
+        <a href="adjustments.html">5. Inventory Adjustment</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="settings.html">6. Settings (Warehouse)</a>
+        <a href="#" id="logout-link" style="margin-top: 50px;">Logout</a>
+    </div>
+    
+    <div class="content">
+        <h1>Inventory Adjustment</h1>
+        <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); margin-bottom: 25px;">
+            <h2>New Adjustment</h2>
+            <label>Product SKU/Code</label><input type="text" placeholder="Start typing product code..." style="width: 100%; margin-bottom: 15px;"/>
+            <label>Location to Adjust</label><input type="text" placeholder="e.g., Rack A" style="width: 100%; margin-bottom: 15px;"/>
+            <label>Counted Quantity (Physical)</label><input type="number" placeholder="Enter physical count" style="width: 100%; margin-bottom: 15px;"/>
+            <p style="margin-bottom: 15px; color: #546e7a;">*System will auto-calculate difference based on recorded stock.*</p>
+            <button class="btn-primary">Validate Adjustment</button>
+        </div>
+
+        <h2>Adjustment History</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Product</th>
+                    <th>Location</th>
+                    <th>Recorded Stock</th>
+                    <th>Counted Stock</th>
+                    <th>Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2025-11-21</td><td>Steel Rods 10mm</td><td>Rack A</td><td>103</td><td>100</td><td style="color: #d32f2f;">-3</td></tr>
+                <tr><td>2025-11-15</td><td>Office Chair Pro</td><td>Main W.</td><td>84</td><td>85</td><td style="color: #00796b;">+1</td></tr>
+            </tbody>
+        </table>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>

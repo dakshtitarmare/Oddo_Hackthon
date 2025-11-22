@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockMaster — Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-layout">
+    <div class="sidebar">
+        <h3>StockMaster</h3>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">1. Products</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="receipts.html">2. Receipts (Incoming)</a>
+        <a href="deliveries.html">3. Delivery Orders (Outgoing)</a>
+        <a href="transfers.html">4. Internal Transfers</a>
+        <a href="adjustments.html">5. Inventory Adjustment</a>
+        <hr style="border-color: #00695c; margin: 10px 0;">
+        <a href="settings.html">6. Settings (Warehouse)</a>
+        <a href="#" id="logout-link" style="margin-top: 50px;">Logout</a>
+    </div>
+    <div class="content">
+        <h1>Product Management</h1>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <input type="text" placeholder="Search by SKU or Name..." style="width: 300px; padding: 8px; border-radius: 6px;" />
+            <button class="btn-primary">➕ Create New Product</button>
+        </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr><th>SKU / Code</th><th>Name</th><th>Category</th><th>UoM</th><th>Stock (Total)</th><th>Reorder Rule</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>SR-001</td><td>Steel Rods 10mm</td><td>Raw Material</td><td>Kg</td><td>500</td><td>Min: 100 kg</td></tr>
+                <tr><td>CH-012</td><td>Office Chair Pro</td><td>Finished Goods</td><td>Unit</td><td>85</td><td>Min: 50 units</td></tr>
+            </tbody>
+        </table>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>
