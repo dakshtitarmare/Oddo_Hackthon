@@ -7,7 +7,7 @@ StockMaster helps businesses manage incoming and outgoing stock in real-time. Un
 
 ## 🛠 Tech Stack
 * **Frontend:** React + Vite + Tailwind CSS
-* **Backend:** Node.js + Express
+* **Backend:** Node.js + Python
 * **Database:** Firebase Realtime Database (NoSQL)
 * **AI Engine:** Google Gemini 1.5 Flash (via Google Generative AI SDK)
 
