@@ -1,0 +1,64 @@
+your-project/
+├── public/
+│   └── vite.svg
+│
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   │
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Card.jsx
+│   │   │   └── Loader.jsx
+│   │   │
+│   │   ├── Sidebar.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── FlipCard.jsx     <-- For login/signup flip animation
+│   │   └── ProtectedRoute.jsx
+│   │
+│   ├── pages/
+│   │   ├── Auth/
+│   │   │   ├── LoginSignup.jsx
+│   │   │   ├── OtpVerification.jsx
+│   │   │   ├── ForgotPassword.jsx
+│   │   │   └── ResetPassword.jsx
+│   │   │
+│   │   ├── Dashboard/
+│   │   │   └── Dashboard.jsx
+│   │   │
+│   │   ├── Inventory/
+│   │   │   └── Inventory.jsx
+│   │   │
+│   │   ├── Profile/
+│   │   │   └── Profile.jsx
+│   │   │
+│   │   └── Checkout/
+│   │       └── Checkout.jsx
+│   │
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   └── InventoryContext.jsx
+│   │
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   └── useInventory.js
+│   │
+│   ├── layouts/
+│   │   └── MainLayout.jsx   <-- sidebar + navbar wrapper
+│   │
+│   ├── utils/
+│   │   ├── validators.js
+│   │   ├── api.js
+│   │   └── constants.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
